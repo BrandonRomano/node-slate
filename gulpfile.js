@@ -83,15 +83,15 @@ gulp.task('js', function() {
     './source/javascripts/lib/_jquery.tocify.js',
     './source/javascripts/lib/_imagesloaded.min.js',
   ];
+
   var scripts = [
-    './source/javascripts/app/_lang.js',
-    './source/javascripts/app/_toc.js',
+    './source/javascripts/app/*.js',
   ];
 
   if (config.search) {
     libs.push('./source/javascripts/lib/_lunr.js');
     libs.push('./source/javascripts/lib/_jquery.highlight.js');
-    libs.push('./source/javascripts/app/_search.js');
+    libs.push('./source/javascripts/app_search/_search.js');
   }
 
   return gulp.src(libs.concat(scripts))
